@@ -1,25 +1,24 @@
 /* eslint-env mocha */
+/* eslint-disable no-unused-expressions */
 
-'use strict'
+const chai = require('chai')
 
-var chai = require('chai')
+const describe = require('mocha').describe
+const it = require('mocha').it
+const expect = chai.expect
 
-var describe = require('mocha').describe
-var it = require('mocha').it
-var expect = chai.expect
-
-var sinonChai = require('sinon-chai')
+const sinonChai = require('sinon-chai')
 chai.use(sinonChai)
 
-var dummyTitle = 'Dummy Title'
-var dummyContent = 'This is dummy content'
-var dummyPost = {
+const dummyTitle = 'Dummy Title'
+const dummyContent = 'This is dummy content'
+const dummyPost = {
   title: dummyTitle,
   description: dummyContent
 }
 
 describe('gulp-feed', function () {
-  var gulpFeed, mockery
+  let gulpFeed, mockery
 
   beforeEach(function () {
     mockery = require('mockery')
@@ -37,12 +36,12 @@ describe('gulp-feed', function () {
   })
 
   it('returns a readable stream', function () {
-    var isReadable = require('isstream').isReadable
-    var fileStream = gulpFeed([dummyPost], {
+    const isReadable = require('isstream').isReadable
+    const fileStream = gulpFeed([dummyPost], {
       render: {
         'test.json': 'json1'
       }
     })
-    expect(isReadable(fileStream)).to.be.true()
+    expect(isReadable(fileStream)).to.be.true
   })
 })
