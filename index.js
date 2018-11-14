@@ -12,11 +12,11 @@ module.exports = function (posts, options = {}) {
     throw new Error('gulp-feed: Incorrect options.')
   }
   delete options.render
-  const formatter = options.formatter || (x => x)
-  delete options.formatter
+  const transform = options.transform || (x => x)
+  delete options.transform
 
   const feed = new Feed(options)
-  posts.forEach(post => feed.addItem(formatter(post)))
+  posts.forEach(post => feed.addItem(transform(post)))
 
   const stream = Readable({
     objectMode: true,

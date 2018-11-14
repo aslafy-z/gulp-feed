@@ -43,4 +43,4 @@ gulpFeed(posts, options)
 
 ### TODO
 
-[ ] More tests
+- [ ] More tests
