@@ -1,6 +1,7 @@
 {
   "name": "@zadkiel/gulp-feed",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "private": false,
   "description": "Gulp `feed` wrapper module",
   "license": "MIT",
   "author": "Zadkiel <hello@zadkiel.fr>",
