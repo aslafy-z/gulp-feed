@@ -48,6 +48,6 @@
     "mockery": "2.1.0",
     "sinon": "6.3.5",
     "sinon-chai": "3.3.0",
-    "standard": "13.0.0"
+    "standard": "13.0.1"
   }
 }
