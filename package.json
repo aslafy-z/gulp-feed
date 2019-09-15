@@ -38,7 +38,7 @@
   "devDependencies": {
     "chai": "4.2.0",
     "coveralls": "3.0.6",
-    "eslint": "6.3.0",
+    "eslint": "6.4.0",
     "husky": "3.0.5",
     "isstream": "0.1.2",
     "istanbul": "0.4.5",
